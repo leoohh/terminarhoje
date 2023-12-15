@@ -1,0 +1,84 @@
+#include<stdlib.h>
+#include <stdio.h>
+
+struct dados_aluno
+{
+    char nome[100];
+    char data[100];
+    float nota[2];
+    float media;
+};
+
+void calcularmedia (struct dados_aluno *aluno) {
+    float somanota = 0;
+    int i;
+    int j;
+
+   
+    for ( j = 0; j < 5 ; j++)
+
+    {
+       for ( i = 0; i < 5; i++)
+       {
+       somanota = somanota + aluno[i].nota[j];
+       }
+    aluno[i].media + somanota / 2;
+    somanota = 0;
+       
+    }
+
+
+
+}
+
+
+
+int main (){
+
+
+struct dados_aluno aluno[5];
+int i = 0;
+int j = 0;
+
+
+for ( i = 0; i < 5; i++)
+{
+    fflush (stdin);
+printf ("digite seu nome:");
+scanf ("%s", aluno[i].nome);
+
+fflush (stdin);
+
+printf ("digite sua nota:");
+scanf ("%f", &aluno[i].nota[j]);
+
+printf ("digite sua nota:");
+scanf ("%f", &aluno[i].nota[j]);
+
+fflush (stdin);
+
+printf ("Digite sua data de nascimento:");
+scanf ("%s", &aluno[i].data);
+   
+}
+
+
+system ("cls || clear");
+
+for ( i = 0; i < 5; i++)
+{
+  printf ("Nome:%s\n", aluno[i].nome);
+  printf ("Data:%s\n", aluno[i].data);
+  printf ("Media:%f\n", aluno[i].media);
+
+
+
+
+
+
+
+}
+
+return 0;
+
+  }
